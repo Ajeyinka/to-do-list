@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Aspekta Variable';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url('./variable/AspektaVF.woff2') format('woff2');
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --ff-2:  'Aspekta Variable', serif;
+    --ff-1: 'Inter', sans-serif;
+  }
+
+  html {
+    font-family: var(--ff-2);
+  }
+
+  body {
+    background-image: linear-gradient(120deg, #b69a41, #fda085);
+    color: aliceblue;
+    min-height: 100vh;
+    margin-inline: 20px;
+  }
+
+  header {
+    font-size: 1rem;
+  }
+
+  header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border:none;
+    background: whitesmoke;
+    max-width: 100%;
+  }
+
+  form button {
+    color:#d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  form button:hover {
+    background:#d88771;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
+  }
+
+  .todo {
+    margin: 0.5rem;
+    background: whitesmoke;
+    font-size: 1.5rem;
+    color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .todo li {
+    flex: 1;
+  }
+
+  .trash-btn, .complete-btn {
+    background: #ff6f47;
+    color: aliceblue;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--ff-2);
+  }
+
+  .complete-btn {
+    background: rgb(77, 210, 77);
+  }
+
+  .todo-item {
+    padding: 0 0.5rem;
+  }
+
+  .fa-trash, .fa-check{
+    pointer-events: none;
+  }
+
+
+  .completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+
+  .fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .select{
+
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  select{
+    color:#ff6f47;
+    width:10rem;
+    cursor:pointer;
+    padding: 1rem;
+  }
+
+  .select::after {
+    content:"\25BC";
+    position:absolute;
+    background: #ff6f47;
+    top:0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+
+  .select:hover::after {
+    background: white;
+    color:#ff6f47;
+  }
